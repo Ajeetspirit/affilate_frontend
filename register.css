@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background: linear-gradient(to right , #edf6f2,#edf6f1);
+}
+main{
+    position: relative;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+.block{
+    position: absolute;
+    width: 100%;
+    height:600px;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: translate(-50%,-50%);
+    background: #fff;
+
+    
+}
+.header{
+    position: absolute;
+    top:0;
+    left:0;
+    }
+.logo{
+    position: relative;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000;
+}
+.left{
+    position: relative;
+    top:0;
+    left:0;
+    width:800px;
+    height: 100vh;
+    background: linear-gradient(to right bottom, #7D0ED6,#B325A5);
+    color: #fff;
+}
+.heading{
+    position: relative;
+    top:14em;
+    width: 600px;
+    left:80px;
+}
+p{
+    position: relative;
+    width: 400px;
+    top:12px;
+    left:60px;
+    font-size: 1.4em;
+    text-align: center;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    font-size: 2em;
+    color: #fff;
+    top:60px;
+    left:190px;
+    background: yellowgreen;
+    border: 1px solid yellowgreen;
+    border-radius:30px ;
+    padding: 5px 15px;
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+
+}
+.right{
+    position: absolute;
+ 
+    left: 930px;
+    top:10px;
+    z-index: 1000000;
+}
+.head{
+position: relative;
+font-size: 2em;
+top:-10px;
+left: -50px;
+}
+.form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction:column ;
+}
+input{
+    position: relative;
+    border: none;
+    text-indent: 10px;
+    outline: none;
+    /* background: #f4f8; */
+    font-size: 1.2em;
+    width: 450px;
+    top:50px;
+    border-bottom:1px solid #7D0ed6 ;
+
+    margin: 20px 0px;
+}
+button{
+    position: relative;
+    top:90px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    width: 200px;
+    font-size: 2em;
+    background:#7D0ED6 ;
+    padding: 5px 20px;
+    color: #fff;
+    border: 1px solid #7D0ED6;
+    border-radius: 30px;
+}

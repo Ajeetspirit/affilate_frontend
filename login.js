@@ -26,7 +26,7 @@ loader.style.visibility="hidden";
   
 
 
-btn.addEventListener('click',()=>{
+btn.addEventListener('click',async()=>{
   
     if(id.value == "" && pass.value == ""){
         let data = "Please Enter your credentials";
@@ -55,11 +55,12 @@ btn.addEventListener('click',()=>{
             device:device1
 
         }
-       let data = fetch('http://18.118.210.250/api/v1/login_affilate', {
+      await  fetch('https://affilatebackend.tk/api/v1/login_affilate', {
             method: 'POST',
             body: JSON.stringify(obj),
             headers: { 'Content-Type': 'application/json' }
-        }).then(res => res.json())
+        })
+        .then(res => res.json())
           .then(json => {
               console.log(json)
              

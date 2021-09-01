@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(to right bottom , #e6dcd4,#e4dad1,#e8ddd5) ;
+    overflow: hidden;
+}
+.header{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    position: relative;
+    font-size: 1.8em;
+    font-style: 700;
+    font-weight: 800;
+
+    
+}
+.nav{
+    position: relative;
+    font-size: 1.3em;
+    
+}
+.nav ul{
+    display: flex;
+    align-items: center;
+}
+.nav ul li{
+    list-style: none;
+} 
+.nav ul li a{
+    position: relative;
+    color: black;
+    text-transform: capitalize;
+    display: inline-block;
+    padding: 0px 17px;
+    text-decoration: none;
+    font-weight: 800;
+}
+.btn{
+    position: relative;
+    font-size: 1.2em;
+    background: black;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.section{
+
+position: relative;
+width:100%
+
+}
+
+.content{
+    position: relative;
+    
+}
+.heading{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.heading p{
+    position: relative;
+    font-size: 4em;
+    top:-160px;
+    left:65px;
+    font-weight: 700;
+}
+.heading img{
+    position: relative;
+    width:500px;
+    height:500px;
+    top:20px;
+   left: -100px;
+}
+
+.description{
+    position: relative;
+}
+.description ul li{
+    position: relative;
+    font-size: 1.6em;
+    top:-350px;
+    left:95px;
+}
+.btns{
+    position: relative;
+    top:-310px;
+    left:70px;
+    display: inline-block;
+   
+}
+.register{
+    position: relative;
+    font-size: 1.5em;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color:#fff;
+    background-color: black;
+}
+.login{
+    position: relative;
+    left:30px;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 10px 20px;
+    border:1px solid black;
+    color: black;
+    border-radius: 30px;
+}
+
+.footer{
+    position: relative;
+    width: 100%;
+}
+.contact{
+    position: relative;
+  top:-300px;
+}
+.contact a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    top:30px;
+    font-weight: 700;
+    font-size:1.2em;
+    left:1100px;
+}
