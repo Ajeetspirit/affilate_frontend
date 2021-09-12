@@ -18,7 +18,7 @@
     
     background: url('/img/lock.png');
     width: 100%;
-    height: 100vh;
+    height: 550px;
    mix-blend-mode: overlay;
 }
 main{
@@ -46,6 +46,7 @@ main{
     font-size: 0.8em;
     opacity: .7;
     left: 60px;
+    cursor: pointer;
 }
 .logo span{
     color: #46ADA8;
@@ -72,26 +73,7 @@ ul{
     font-weight: 500;
  }
 
- .header_footer{
-     position: relative;
-     width: 100%;
-     height: 550px;
-     top:20px;
-     background-color: #E8E8E8;
- }
- .content{
-     position: relative;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
- }
- .pic{
-     position: relative;
-     width: 400px;
-     top:50px;
-     left:-20px;
-     height:400px;
- }
+ 
  .feature{
      position: relative;
      width: 100%;
@@ -101,6 +83,7 @@ ul{
  .feature .text{
      position: relative;
      text-align: center;
+     z-index: 100000;
      font-size: 1.4em;
      top:50px;
      font-weight: 400;
@@ -108,64 +91,31 @@ ul{
 .feature a{
     position: relative;
     display: inline-block;
-    padding: 10px 30px;
+    padding: 5px 30px;
     color: #fff;
     top:-400px;
     font-weight: 600;
     font-size: 1.3em;
-    background-color: #EE6655;
-    border: 1px solid #EE6655;
+    background-color: #f59740;
+    border: 1px solid #f59740;
     border-radius: 50px;
-    width: 200px;
+    width: 230px;
     text-decoration: none;
 }
- .img_side{
-     position: relative;
-     left:-200px;
-top:-40px;
-     
- }
- .img_side .heading{
-     position: relative;
-     font-size: 3em;
-     font-weight: 700;
-letter-spacing: 2px;
-top:50px;
-     word-spacing: 10px;
- }
- .img_side .para{
-     position: relative;
-     width: 450px;
-     top:70px;
-     line-height: 40px;
-     font-size: 1.3em;
-     
- }
- .btns{
-     position: relative;
-     top:130px;
- }
- .btns a{
-     position: relative;
-     display: inline-block;
-     text-decoration: none;
-     font-size: 1.4em;
-     padding: 10px 20px;
-    
- }
- .subscribe{
-     position: relative;
-     border: 1px solid #EE6655;
-     border-radius: 20px;
-     background-color: #EE6655;
-     color: #fff;
-     font-weight: 500;
- }
- .youtube{
+.feature .login{
     position: relative;
-    border: 1px solid #000;
-    border-radius: 20px; 
-    color: #000;
-    font-weight: 500;
-    left: 20px;
- }
+    left:-50px;
+    width:210px;
+    border:none;
+    background: #fff;
+    color: #f59740;
+}
+.content{
+    position: relative;
+    font-size: 2em;
+    text-transform: capitalize;
+    font-weight: 600;
+    top:-550px;
+    color: #fff;
+    left:350px;
+}

@@ -69,15 +69,15 @@ p{
 a{
     position: relative;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.6em;
     color: #fff;
     top:60px;
     left:190px;
     background: yellowgreen;
     border: 1px solid yellowgreen;
     border-radius:30px ;
-    padding: 5px 15px;
-    width: 200px;
+    padding: 3px 10px;
+    width: 170px;
     text-align: center;
     display: inline-block;
 
@@ -110,6 +110,7 @@ input{
     font-size: 1.2em;
     width: 450px;
     top:50px;
+    background: transparent;
     border-bottom:1px solid #7D0ed6 ;
 
     margin: 20px 0px;
@@ -127,4 +128,48 @@ button{
     color: #fff;
     border: 1px solid #7D0ED6;
     border-radius: 30px;
+}
+.snackbar > div{
+    background-color: #000;
+    color: #fff;
+    min-width: 180px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.snackbar{
+    position:fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: bottom 0.5s opacity 0.6s;
+}
+.snackbar.show{
+    bottom: 100px;
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+@media screen and (min-width:1000px){
+
+    .left{
+    
+        width:650px;
+        
+    }
+    a{
+        left:150px;
+        padding:5px 9px;
+    }
+    .right{
+        left:750px;
+    }
 }

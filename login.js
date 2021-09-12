@@ -5,32 +5,31 @@ let pass = document.querySelector('.pass');
 let btn = document.querySelector('.btn');
 
 let loader = document.querySelector('#loader');
+let snackbar = document.querySelector('.snackbar');
 
+let value = document.querySelector('.value');
 
 let whole = document.querySelector('main');
-console.log(whole)
-
-
 loader.style.visibility="hidden";
    
  
-        Notification.requestPermission(permission=>{
-            if(permission == 'granted'){
-                new Notification('Affilate_Marketing',{
-                    body:"Welcome to Affliate Plateform"
-                })
-            }
-        })
-        
-    
-  
-
-
-btn.addEventListener('click',async()=>{
-  
+btn.addEventListener('click',()=>{
+    if(pass.value.length<6 ){
+        snackbar.classList.add('show');
+        value.innerHTML="Password should be contain 6 characters";
+        setTimeout(()=>{
+            snackbar.classList.remove('show');
+           
+        },2500) 
+    }
+    else{
     if(id.value == "" && pass.value == ""){
-        let data = "Please Enter your credentials";
-        window.alert(data)
+        snackbar.classList.add('show');
+        value.innerHTML="Please Enter your Credentials";
+        setTimeout(()=>{
+            snackbar.classList.remove('show');
+           
+        },2000) 
     }
     else{
         whole.style.visibility="hidden";
@@ -55,48 +54,46 @@ btn.addEventListener('click',async()=>{
             device:device1
 
         }
-      await  fetch('https://affilatebackend.tk/api/v1/login_affilate', {
+   fetch('https://affilatebackend.tk/api/v1/login_affilate', {
             method: 'POST',
             body: JSON.stringify(obj),
             headers: { 'Content-Type': 'application/json' }
         })
-        .then(res => res.json())
+        .then(resp => resp.json())
           .then(json => {
               console.log(json)
              
             if(json.status =="success"){
-                Notification.requestPermission(permission=>{
-                    if(Notification.permission == "granted"){
-                        new Notification('Affilate_Marketing',{
-                            body:`Congratulation You successfully logged in`
-                        })
-                    }
-                })
+            
                 
                 whole.style.visibility="visible";
                 document.body.style.background = "white";
                loader.style.visibility="hidden";
-                window.location.href="home.html"
+               
+                snackbar.classList.add('show');
+                value.innerHTML=json.Login;
+                setTimeout(()=>{
+                    snackbar.classList.remove('show');
+                    window.location.href="home.html"
+                   
+                },1000) 
 
             }
       else{
-          let error="Oops! Please Check your credentials. Otherwise Register on site";
-          Notification.requestPermission(async(permission)=>{
-            if(Notification.permission == "granted"){
-                await new Notification('Affilate_Marketing',{
-                    body:`${error}`
-                })
-              }
-              window.alert(json.Error  || json.msg);
-          })
          
-          console.log(error)
           whole.style.visibility="visible";
         document.body.style.background = "white";
           loader.style.visibility="hidden";
+          snackbar.classList.add('show');
+          value.innerHTML=json.Error;
+          setTimeout(()=>{
+              snackbar.classList.remove('show');
+          },2000) 
       }
-          });
-
+          
+});
         
     }
+}
 })
+

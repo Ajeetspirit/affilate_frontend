@@ -129,6 +129,8 @@ width:100%
     padding: 10px 20px;
     border:1px solid black;
     color: black;
+    width: 200px;
+    text-align: center;
     border-radius: 30px;
 }
 
@@ -148,4 +150,37 @@ width:100%
     font-weight: 700;
     font-size:1.2em;
     left:1100px;
+}
+@media screen and (min-width:1000px){
+
+   .section{
+
+    font-size: .9em;
+
+   }
+   .description ul li{
+       top:-300px;
+   }
+   .heading img{
+   
+    width:400px;
+    height:400px;
+    top:20px;
+   left: -100px;
+}
+.btns{
+    top:-280px;
+}
+.contact{
+    position: relative;
+  top:-320px;
+  left:-250px;
+}
+.logo{
+    position: relative;
+    font-size: 1.3em;
+    font-weight: 700;
+
+    
+}
 }
