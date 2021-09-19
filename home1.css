@@ -125,3 +125,33 @@ ul{
         left:250px;
     }
 }
+
+@media screen and (max-width:800px){
+    .logo{
+      visibility: hidden;
+        
+    }
+.nav li a{
+position: relative;
+font-size: 18px;
+left: -150px;
+padding: 0px 10px;
+color: #46ADA8;
+margin-left: 10px;
+}
+.content{
+    position: relative;
+    font-size: 19px;
+    font-weight: 500;
+    left: 5px;
+}
+.text .login{
+    position: relative;
+    left:0px;
+    top:-250px;
+    width: 230px;
+    text-align: center;
+}
+
+    
+}
