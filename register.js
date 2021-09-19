@@ -72,11 +72,12 @@ btn.addEventListener('click',()=>{
                             snackbar.classList.remove('show')
                         },3000)
                         otp.readOnly = false;
-                        otp.autofocus =true;
                         mail.readOnly=true;
                         pass.readOnly=true;
                         phn.readOnly=true;
                         nme.readOnly=true;
+                        otp.innerHTML = `${json.otp}`;
+                        window.localStorage.setItem('name_affiliate',`${json.Name}`)
                         
 
                     }
@@ -95,10 +96,13 @@ btn.addEventListener('click',()=>{
 
             else{
 
+               
+
                 let obj = {
                     email:mail.value,
                     otp:otp.value
                 }
+
 
                 fetch('https://affilatebackend.tk/api/v1/verify',{
                     method:"POST",
