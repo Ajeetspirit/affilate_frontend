@@ -119,3 +119,9 @@ ul{
     color: #fff;
     left:450px;
 }
+@media screen and (max-width:1400px) {
+    .content{
+        position: relative;
+        left:250px;
+    }
+}

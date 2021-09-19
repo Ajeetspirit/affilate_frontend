@@ -411,8 +411,11 @@ opacity: 0.6;
 	
 
 }
-@media screen and (max-width:1000px){
-
+@media screen and (max-width:1400px){
+	.title{
+		position: relative;
+		left:100px;
+	}
 	.whole{
 		position: relative;
 		left:50px;
