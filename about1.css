@@ -104,9 +104,8 @@ background:linear-gradient(to right bottom, #151c3b,#18244a,#183162,#1b3f7c,#1b4
 	background: rgb(0,0,0,.8);
 	
 	width: 700px;
-	position: relative;
     top:170px;
-    left:300px;
+    left:400px;
 	padding: 10px;
 	
 
@@ -119,7 +118,7 @@ background:linear-gradient(to right bottom, #151c3b,#18244a,#183162,#1b3f7c,#1b4
 display: inline-block;
 
 top:260px;
-left:580px;
+left:680px;
 
 }
 
@@ -412,7 +411,7 @@ opacity: 0.6;
 	
 
 }
-@media screen and (min-width:1000px){
+@media screen and (max-width:1000px){
 
 	.whole{
 		position: relative;
