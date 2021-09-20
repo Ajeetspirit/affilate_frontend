@@ -125,7 +125,7 @@ btn.addEventListener('click',()=>{
                         value.innerHTML=json.status;
                         setTimeout(()=>{
                             snackbar.classList.remove('show')
-                            window.location.href="home%user%learnearn%affiliate-marketing%static.html"
+                            window.location.href="home-user_learnearn-affiliate-marketing_static.html"
                         },1000)
                     }
                     else{
