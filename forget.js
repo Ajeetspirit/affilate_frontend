@@ -4,7 +4,10 @@ let btn = document.querySelector('.btn');
 let snackbar = document.querySelector('.snackbar');
 
 let value = document.querySelector('.value');
-
+window.history.forward();
+function noBack() {
+    window.history.forward();
+}
 btn.addEventListener('click',()=>{
 
     try{

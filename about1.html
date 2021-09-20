@@ -94,7 +94,10 @@ Unlike a sales team, affiliate marketing works for you 24/7, making money for bo
 
 <script >
 	
-
+window.history.forward();
+function noBack() {
+    window.history.forward();
+}
 	let aboutToggle=document.querySelector('.about-toggle');
 	aboutToggle.addEventListener('click',()=>{
 		aboutToggle.classList.add('active');

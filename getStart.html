@@ -75,7 +75,10 @@
         <div class="about-disclaimer">@learnearn.live site by rht</div>
     </main>
     <script>
-
+window.history.forward();
+function noBack() {
+    window.history.forward();
+}
 
         let btn = document.querySelector('.btn')
         btn.addEventListener('click',()=>{

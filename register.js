@@ -7,7 +7,17 @@ let btn = document.querySelector('.submit');
 let snackbar = document.querySelector('.snackbar');
 
 let value = document.querySelector('.value');
-
+function preventBack() {
+    window.history.forward(); 
+}
+  
+setTimeout("preventBack()", 0);
+  
+window.onunload = function () { null };
+window.history.forward();
+function noBack() {
+    window.history.forward();
+}
 btn.addEventListener('click',()=>{
     try{
 
@@ -32,7 +42,11 @@ btn.addEventListener('click',()=>{
             }
 
             else{
-
+                let re =/@/i;
+                let num = /^\d*$/
+                let result = re.test(id.value);
+                let res = num.test(phn.value);
+                if(result && res){
                 let tm = new Date();
         let date = tm.getDate();
         let month = tm.getMonth();
@@ -75,7 +89,7 @@ btn.addEventListener('click',()=>{
                             pass.readOnly=true;
                             phn.readOnly=true;
                             nme.readOnly=true;
-                            window.localStorage.setItem('name_affiliate',`${json.Name}`)
+                            window.localStorage.setItem('name_affiliate',`${json.User.Name}`)
                             otp.value= `${json.User.otp}`;
                         },4000)
                       
@@ -140,8 +154,17 @@ btn.addEventListener('click',()=>{
 
 
             }
-
+            else{
+                snackbar.classList.add('show');
+                      value.innerHTML="Please Enter valid Credentials";
+                      setTimeout(()=>{
+                          snackbar.classList.remove('show');
+                      },2000) 
+            }
         }
+      
+        }
+        
 
     }
     catch(err){
