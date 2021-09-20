@@ -5,7 +5,9 @@ let pass = document.querySelector('.password');
 let otp = document.querySelector('.otp');
 let btn = document.querySelector('.submit');
 let snackbar = document.querySelector('.snackbar');
-
+let loader = document.querySelector('#loader')
+let main = document.querySelector('main');
+loader.style.visibility="hidden";
 let value = document.querySelector('.value');
 function preventBack() {
     window.history.forward(); 
@@ -43,10 +45,13 @@ btn.addEventListener('click',()=>{
 
             else{
                 let re =/@/i;
-                let num = /^\d*$/
-                let result = re.test(id.value);
-                let res = num.test(phn.value);
-                if(result && res){
+                
+                let result = re.test(mail.value);
+             
+                if(result){
+                    main.style.visibility="hidden";
+        document.body.style.background = "black";
+    loader.style.visibility="visible";
                 let tm = new Date();
         let date = tm.getDate();
         let month = tm.getMonth();
@@ -78,10 +83,12 @@ btn.addEventListener('click',()=>{
 
                     console.log(json);
                     if(json.status == "success"){
-
+                        main.style.visibility="visible";
+                        document.body.style.background = "white";
+                    loader.style.visibility="hidden";
                         btn.innerHTML = "Submit";
                         snackbar.classList.add("show");
-                        value.innerHTML="Match otp sends on mail";
+                        value.innerHTML=" Otp sends successfully";
                         setTimeout(()=>{
                             snackbar.classList.remove('show')
                             otp.readOnly = false;
@@ -98,7 +105,9 @@ btn.addEventListener('click',()=>{
 
                     }
                     else{
-
+                        main.style.visibility="visible";
+                        document.body.style.background = "white";
+                    loader.style.visibility="hidden";
                         snackbar.classList.add("show");
                         value.innerHTML=json.Error;
                         setTimeout(()=>{
@@ -112,7 +121,9 @@ btn.addEventListener('click',()=>{
 
             else{
 
-               
+                main.style.visibility="hidden";
+                document.body.style.background = "black";
+            loader.style.visibility="visible";
 
                 let obj = {
                     email:mail.value,
@@ -130,6 +141,9 @@ btn.addEventListener('click',()=>{
                 .then(json=>{
                     console.log(json);
                     if(json.status == "success"){
+                        main.style.visibility="visible";
+                        document.body.style.background = "white";
+                    loader.style.visibility="hidden";
                         snackbar.classList.add("show");
                         value.innerHTML=json.status;
                         setTimeout(()=>{
@@ -138,6 +152,9 @@ btn.addEventListener('click',()=>{
                         },1000)
                     }
                     else{
+                        main.style.visibility="visible";
+                        document.body.style.background = "white";
+                    loader.style.visibility="hidden";
                         snackbar.classList.add("show");
                         value.innerHTML=json.msg;
                         setTimeout(()=>{

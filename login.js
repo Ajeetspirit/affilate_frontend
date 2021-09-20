@@ -41,6 +41,7 @@ btn.addEventListener('click',()=>{
         if(result){
         whole.style.visibility="hidden";
         document.body.style.background = "black";
+        
         register.style.visibility="hidden";
         loader.style.visibility="visible"
         let tm = new Date();
