@@ -80,7 +80,7 @@ btn.addEventListener('click',()=>{
                 
                 setTimeout(()=>{
                     snackbar.classList.remove('show');
-                    window.location.href="home.html"
+                    window.location.href="home%user%learnearn%affiliate-marketing%static.html"
                    
                 },1000) 
 

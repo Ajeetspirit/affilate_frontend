@@ -327,7 +327,7 @@ footer{
 .about-link ul{
 position: relative;
 list-style: none;
-left:90px;
+left:60px;
 
 }
 .about-link li{
@@ -414,11 +414,14 @@ opacity: 0.6;
 @media screen and (max-width:1400px){
 	.title{
 		position: relative;
-		left:100px;
+		left:300px;
 	}
 	.whole{
 		position: relative;
 		left:50px;
+	}
+	.about-btn{
+		left:550px;
 	}
 	.about-disclaimer{
 		left: -325px;

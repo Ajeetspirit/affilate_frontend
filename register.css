@@ -15,7 +15,7 @@ main{
     left: 0;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 
 }
 .block{
@@ -24,7 +24,7 @@ main{
     height:600px;
     top: 50%;
     left: 50%;
-    overflow: hidden;
+    overflow-x: hidden;
     transform: translate(-50%,-50%);
     background: #fff;
 
@@ -172,4 +172,72 @@ button{
     .right{
         left:750px;
     }
+}
+@media screen and (max-width:800px){
+    .left{
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+    .heading{
+        position: relative;
+        left: -50px;
+        font-size: 15px;
+        padding: 15px 30px;
+    }
+    .heading h1{
+        position: relative;
+        font-size: 28px;
+        left:-70px;
+        top:-40px;
+        padding: 15px 90px;
+    }
+    .heading p{
+        position: relative;
+        width:350px;
+        text-align: center;
+        font-size: 19px;
+        font-weight: 500;
+        left:20px;
+        top:-20px;
+    }
+    .heading a{
+        position: relative;
+        left: -80px;
+        top:8px;
+    }
+    .right{
+        position: relative;
+        width: 100%;
+        left:-5px;
+        height:700px
+        
+    }
+    .right .head{
+        position: relative;
+        font-size: 25px;
+        top:30px;
+        left:-70px;
+    }
+    .form{
+        position: relative;
+        top:60px;
+    }
+    .form input{
+   width: 300px;
+        left:2px;
+        font-size: 20px;
+        overflow: hidden;
+    }
+    .snackbar > div{
+       
+        min-width: 280px;
+        padding: 15px 30px;
+
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
 }

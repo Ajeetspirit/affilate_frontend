@@ -67,16 +67,23 @@ btn.addEventListener('click',()=>{
 
                         btn.innerHTML = "Submit";
                         snackbar.classList.add("show");
-                        value.innerHTML="Check your mail for otp";
+                        value.innerHTML="Match otp sends on mail";
                         setTimeout(()=>{
                             snackbar.classList.remove('show')
-                        },3000)
+                            otp.readOnly = false;
+                            mail.readOnly=true;
+                            pass.readOnly=true;
+                            phn.readOnly=true;
+                            nme.readOnly=true;
+                            otp.value= `${json.User.otp}`;
+                        },4000)
                         otp.readOnly = false;
                         mail.readOnly=true;
                         pass.readOnly=true;
                         phn.readOnly=true;
                         nme.readOnly=true;
-                        otp.innerHTML = `${json.otp}`;
+                        otp.value= `${json.User.otp}`;
+
                         window.localStorage.setItem('name_affiliate',`${json.Name}`)
                         
 
@@ -118,7 +125,7 @@ btn.addEventListener('click',()=>{
                         value.innerHTML=json.status;
                         setTimeout(()=>{
                             snackbar.classList.remove('show')
-                            window.location.href="home.html"
+                            window.location.href="home%user%learnearn%affiliate-marketing%static.html"
                         },1000)
                     }
                     else{

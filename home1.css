@@ -134,10 +134,10 @@ ul{
 .nav li a{
 position: relative;
 font-size: 18px;
-left: -150px;
+left: -170px;
 padding: 0px 10px;
 color: #46ADA8;
-margin-left: 10px;
+margin-left: 20px;
 }
 .content{
     position: relative;

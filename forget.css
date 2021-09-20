@@ -12,7 +12,7 @@ main{
     position: relative;
     max-width: 100%;
     height:100vh;
-overflow: hidden;
+overflow-x: hidden;
 }
 .header{
     position: relative;
@@ -120,4 +120,56 @@ button{
     opacity: 1;
     pointer-events: all;
 
+}
+
+@media screen and (max-width:800px)  {
+    .snackbar > div{
+       
+        min-width: 280px;
+        padding: 15px 30px;
+
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .left img{
+        width:300px;
+        height: 300px;
+        top:10px;
+    }
+    .right{
+        top:50px;
+        height: 600px;
+    }
+    .right h1{
+        position: relative;
+        left:-360px;
+        top:-400px;
+        font-size: 30px;
+    }
+    .right h1 span{
+        position: relative;
+        top:-90px;
+        left:110px;
+        color: #04DEC0;
+    }
+    .right p{
+        position: relative;
+        left:-320px;
+        font-size: 20px;
+        top:-30px;
+        padding: 0 30px;
+    }
+    .right input{
+        width: 280px;
+        left:-330px;
+        top:-10px;
+        font-size: 22px;
+    }
+    .right .btn{
+position: relative;
+top:10px;
+left: -320px;
+    }
 }
