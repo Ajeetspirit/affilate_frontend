@@ -75,16 +75,11 @@ btn.addEventListener('click',()=>{
                             pass.readOnly=true;
                             phn.readOnly=true;
                             nme.readOnly=true;
+                            window.localStorage.setItem('name_affiliate',`${json.Name}`)
                             otp.value= `${json.User.otp}`;
                         },4000)
-                        otp.readOnly = false;
-                        mail.readOnly=true;
-                        pass.readOnly=true;
-                        phn.readOnly=true;
-                        nme.readOnly=true;
-                        otp.value= `${json.User.otp}`;
-
-                        window.localStorage.setItem('name_affiliate',`${json.Name}`)
+                      
+                        
                         
 
                     }

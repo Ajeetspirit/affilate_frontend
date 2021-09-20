@@ -72,14 +72,15 @@ btn.addEventListener('click',()=>{
                
                 snackbar.classList.add('show');
                 value.innerHTML=json.Login;
-                let name_localStorage = localStorage.getItem('name_affiliate');
-                if(!name_localStorage){
-                    window.localStorage.setItem('name_affiliate',`${json.Name}`);
-                }
+                
                 
                 
                 setTimeout(()=>{
                     snackbar.classList.remove('show');
+                    let name_localStorage = localStorage.getItem('name_affiliate');
+                if(!name_localStorage){
+                    window.localStorage.setItem('name_affiliate',`${json.Name}`);
+                }
                     window.location.href="home-user_learnearn-affiliate-marketing_static.html"
                    
                 },1000) 
