@@ -172,9 +172,7 @@ btn.addEventListener('click',()=>{
 
             }
             else{
-                main.style.visibility="visible";
-                document.body.style.background = "white";
-            loader.style.visibility="hidden";
+                
                 snackbar.classList.add('show');
                       value.innerHTML="Please Enter valid Credentials";
                       setTimeout(()=>{

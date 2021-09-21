@@ -77,7 +77,7 @@ btn.addEventListener('click',()=>{
                 
                 whole.style.visibility="visible";
                 document.body.style.background = "white";
-                
+                register.style.visibility="visible";
                loader.style.visibility="hidden";
                
                 snackbar.classList.add('show');
@@ -100,6 +100,7 @@ btn.addEventListener('click',()=>{
          
           whole.style.visibility="visible";
         document.body.style.background = "white";
+        register.style.visibility="visible";
           loader.style.visibility="hidden";
           snackbar.classList.add('show');
           value.innerHTML=json.Error;
@@ -112,6 +113,10 @@ btn.addEventListener('click',()=>{
         
     }
     else{
+        whole.style.visibility="visible";
+        document.body.style.background = "white";
+        register.style.visibility="visible";
+          loader.style.visibility="hidden";
         snackbar.classList.add('show');
               value.innerHTML="Please Enter valid email address";
               setTimeout(()=>{
